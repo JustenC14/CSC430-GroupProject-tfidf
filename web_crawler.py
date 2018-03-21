@@ -4,6 +4,9 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
+#Code for cleaning the string was acquired and altered for use in this project
+#The original webpage and more information about this can be found at
+#https://machinelearningmastery.com/clean-text-machine-learning-python/
 def clean_string(string):
     #Split the block of text from website into seperate tokens
     tokens = word_tokenize(string)
