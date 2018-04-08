@@ -65,15 +65,15 @@ def document_normalize(body):
 
     return(body)
 
-def calculate_simularity(query, document_body):
-    simularity_score = 0
+def calculate_similarity(query, document_body):
+    similarity_score = 0
     for i in range(len(query)):
         word = query[i][0]
         for term, tf, tf_wt, normalize in body:
             if word == term:
-                simularity_score += (query[i][6] * normalize)
+                similarity_score += (query[i][6] * normalize)
 
-    return(simularity_score)
+    return(similarity_score)
 
 if __name__ == "__main__":
     doc_collection = [] #This list will store the title and dictionary for our documents
@@ -94,17 +94,17 @@ if __name__ == "__main__":
     for i in range (len(query_list)):
         query_list[i].append(query_list[i][3] * query_list[i][4])
 
-    #Normalize the IDF * TF_WT values for use in calculating cosine simularity score
+    #Normalize the IDF * TF_WT values for use in calculating cosine similarity score
     query_list = query_normalize(query_list)
 
     for title, body in doc_collection:
         body = document_normalize(body)
 
-    doc_simularity = []
+    doc_similarity = []
     for title, body in doc_collection:
-        doc_simularity.append([title, calculate_simularity(query, body)])
+        doc_similarity.append([title, calculate_similarity(query, body)])
 
     print(tabulate(query, headers=['term','tf','tf_wt','df','idf','idf_wt','nmlize']))
-    doc_simularity.sort(key = lambda x: x[1], reverse = True)
+    doc_similarity.sort(key = lambda x: x[1], reverse = True)
 
-    print('\n\n', tabulate(doc_simularity, headers=['Title', 'Score']))
+    print('\n\n', tabulate(doc_similarity, headers=['Title', 'Score']))
