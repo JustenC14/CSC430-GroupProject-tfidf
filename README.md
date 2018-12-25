@@ -13,11 +13,11 @@ relevant the information on the page is to the query.
 
 After many months I would like to revisit this program and attempt to make it
 much more useful. Here are some of the things I have planned for this project.
-..* Ensure that the tf-idf rankings are being calculated properly.
-..* More complex web-scraper implemenatation.
-..* Better tokenization of the web-pages and query.
-..* Create a GUI for the program.
-..* Create a usage section in the README.
+* Ensure that the tf-idf rankings are being calculated properly.
+* More complex web-scraper implemenatation.
+* Better tokenization of the web-pages and query.
+* Create a GUI for the program.
+* Create a usage section in the README.
 
 ## License
 
