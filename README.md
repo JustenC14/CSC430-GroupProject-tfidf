@@ -1,16 +1,24 @@
-Last Edit: Justen Caldwell, 4/06/2018 @ 11:21 AM
+# Python TF-IDF Website Ranker
 
---- CSC 430: Information Storage and Retrieval ---
-Group Project Members: Justen Caldwell, Brandon Robertson
+This project was created by Justen Caldwell and Brandon Robertson
+for the course CSC430 - Information Storage and Retrieval. The program takes a query
+and a list of websites from a user. It then uses [BeautifulSoup](https://www.google.com "BeautifulSoup Landing Page") to scrape information from the provided websites and tokenizes the information on these webpages, along with the provided query.
 
-  This is an attempt at a very basic implementation of TF-IDF to weigh a given
-primary, or query web site with a list of given comparison web sites. The idea is to
-quickly determine how relevant in content one webpage is to another.
+After scraping and tokenizing all of the information, the program then calculates the
+tf-idf rankings for all of the websites against the query. Once these tf-idf weights
+have been calculated, the program outputs a list. The list is in descending order of how
+relevant the information on the page is to the query.
 
+## Future Plans
 
-  In it's current state it will simply give you the title of each webpage along with
- its cosine simularity score computation sorted in descending order. This is so most
- relevant pages are at the top.
- 
-  In the future I would like to add an output file that will display all of the tf, tf_wt
- and other values for the user to look over.
+After many months I would like to revisit this program and attempt to make it
+much more useful. Here are some of the things I have planned for this project.
+..* Ensure that the tf-idf rankings are being calculated properly.
+..* More complex web-scraper implemenatation.
+..* Better tokenization of the web-pages and query.
+..* Create a GUI for the program.
+..* Create a usage section in the README.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
