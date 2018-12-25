@@ -2,7 +2,7 @@
 
 This project was created by Justen Caldwell and Brandon Robertson
 for the course CSC430 - Information Storage and Retrieval. The program takes a query
-and a list of websites from a user. It then uses [BeautifulSoup](https://www.google.com "BeautifulSoup Landing Page") to scrape information from the provided websites and tokenizes the information on these webpages, along with the provided query.
+and a list of websites from a user. It then uses [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/ "BeautifulSoup Landing Page") to scrape information from the provided websites and tokenizes the information on these webpages, along with the provided query.
 
 After scraping and tokenizing all of the information, the program then calculates the
 tf-idf rankings for all of the websites against the query. Once these tf-idf weights
